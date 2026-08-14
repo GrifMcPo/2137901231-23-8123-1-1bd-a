@@ -1,0 +1,30 @@
+name: Telegram Bot
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Запуск каждые 5 минут
+  workflow_dispatch:  # Ручной запуск
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        cd bot
+        pip install -r requirements.txt
+    
+    - name: Run bot
+      run: |
+        cd bot
+        python bot.py
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
