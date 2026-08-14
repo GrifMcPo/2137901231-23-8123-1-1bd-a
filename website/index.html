@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rcon Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-box">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="login" class="tab-content active">
+                <h2>Вход в систему</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="text" id="loginUsername" placeholder="Ник / Айди / Юзнейрм" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Войти</button>
+                </form>
+                <div id="loginMessage" class="message"></div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="register" class="tab-content">
+                <h2>Регистрация</h2>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="regNick" placeholder="Ник" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="regId" placeholder="Айди (макс 8 символов)" maxlength="8" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="regUsername" placeholder="Юзнейрм" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="regEmail" placeholder="Почта" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="regPassword" placeholder="Пароль" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                </form>
+                <div id="registerMessage" class="message"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
