@@ -1,0 +1,5 @@
+admins:
+  "123456789":  # Замените на реальный Telegram ID
+    custom_name: "RCON@Admin"
+  "987654321":  # Еще один админ
+    custom_name: "RCON@Moderator"
